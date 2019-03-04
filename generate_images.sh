@@ -1,9 +1,10 @@
 if [ $# -eq 0 ]; then
-  echo "Usage: $0 <n_images>"
+  echo "Usage: $0 <n_images> <pointsize>"
   exit 1
 fi
 
 N_IMAGES=$1
+SIZE=$2
 
 letter() {
   out=$(printf \\$(printf '%03o' $((RANDOM%26+65))))
@@ -15,6 +16,6 @@ for (( i = 0 ; i < $N_IMAGES ; i++ )); do
   LETTERS=$(letter)$(letter)$(letter)
   PLATE=$NUMBERS-$LETTERS
   echo "Generating $PLATE"
-  convert -background white -fill black -pointsize 36 label:"$PLATE" img$i.png
+  convert -background white -fill black -pointsize $SIZE label:"$PLATE" img_${SIZE}_${i}.png
 done
 
