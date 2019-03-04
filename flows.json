@@ -1,0 +1,1020 @@
+[
+    {
+        "id": "82bc67f0.1206c8",
+        "label": "Main",
+        "type": "tab"
+    },
+    {
+        "id": "4e83eaa.2cae714",
+        "label": "HeavyTask",
+        "type": "tab"
+    },
+    {
+        "icon": "dashboard",
+        "id": "5f69703b.5445b",
+        "name": "Home",
+        "type": "ui_tab",
+        "z": ""
+    },
+    {
+        "disp": true,
+        "id": "7509f13.54aff1",
+        "name": "Jobs",
+        "order": 1,
+        "tab": "5f69703b.5445b",
+        "type": "ui_group",
+        "width": "6",
+        "z": ""
+    },
+    {
+        "id": "cf0e758c.42db98",
+        "site": {
+            "allowSwipe": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "hideToolbar": "false",
+            "name": "Node-RED Dashboard",
+            "sizes": {
+                "cx": 6,
+                "cy": 6,
+                "gx": 6,
+                "gy": 6,
+                "px": 0,
+                "py": 0,
+                "sx": 48,
+                "sy": 48
+            }
+        },
+        "theme": {
+            "customTheme": {
+                "baseColor": "#4B7930",
+                "baseFont": "Helvetica Neue",
+                "default": "#4B7930",
+                "name": "Untitled Theme 1"
+            },
+            "darkTheme": {
+                "baseColor": "#097479",
+                "baseFont": "Helvetica Neue",
+                "default": "#097479",
+                "edited": false
+            },
+            "lightTheme": {
+                "baseColor": "#0094CE",
+                "baseFont": "Helvetica Neue",
+                "default": "#0094CE",
+                "edited": true,
+                "reset": false
+            },
+            "name": "theme-light",
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "edited": false,
+                    "value": "#0094CE"
+                },
+                "group-backgroundColor": {
+                    "edited": false,
+                    "value": "#ffffff"
+                },
+                "group-borderColor": {
+                    "edited": false,
+                    "value": "#ffffff"
+                },
+                "group-textColor": {
+                    "edited": false,
+                    "value": "#1bbfff"
+                },
+                "page-backgroundColor": {
+                    "edited": false,
+                    "value": "#fafafa"
+                },
+                "page-sidebar-backgroundColor": {
+                    "edited": false,
+                    "value": "#ffffff"
+                },
+                "page-titlebar-backgroundColor": {
+                    "edited": false,
+                    "value": "#0094CE"
+                },
+                "widget-backgroundColor": {
+                    "edited": false,
+                    "value": "#0094ce"
+                },
+                "widget-borderColor": {
+                    "edited": false,
+                    "value": "#ffffff"
+                },
+                "widget-textColor": {
+                    "edited": false,
+                    "value": "#111111"
+                }
+            }
+        },
+        "type": "ui_base"
+    },
+    {
+        "disp": true,
+        "id": "162dd721.824209",
+        "name": "Temperature",
+        "order": 2,
+        "tab": "5f69703b.5445b",
+        "type": "ui_group",
+        "width": "6",
+        "z": ""
+    },
+    {
+        "disp": true,
+        "id": "53bbd9b7.99a9d8",
+        "name": "Memory",
+        "order": 3,
+        "tab": "5f69703b.5445b",
+        "type": "ui_group",
+        "width": "6",
+        "z": ""
+    },
+    {
+        "disp": true,
+        "id": "78b8ad23.1d8374",
+        "name": "CPU",
+        "tab": "5f69703b.5445b",
+        "type": "ui_group",
+        "width": "6",
+        "z": ""
+    },
+    {
+        "crontab": "",
+        "id": "3ef59ed5.5168a2",
+        "name": "inject",
+        "once": false,
+        "payload": "{ \"temp\": 50 }",
+        "payloadType": "json",
+        "repeat": "",
+        "topic": "",
+        "type": "inject",
+        "wires": [
+            [
+                "d7805dc0.f624f"
+            ]
+        ],
+        "x": 90.5,
+        "y": 221,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "id": "869369d4.1cf018",
+        "links": [
+            "f07f9e82.fff1c"
+        ],
+        "name": "",
+        "type": "link out",
+        "wires": [],
+        "x": 516.5,
+        "y": 255,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "id": "14bf125c.3da62e",
+        "links": [
+            "cbda8073.4e92a",
+            "bbb31792.fd3f58"
+        ],
+        "name": "",
+        "type": "link in",
+        "wires": [
+            [
+                "1b04e699.750559",
+                "c211bf23.c9fbe",
+                "bfc9e39.e86902"
+            ]
+        ],
+        "x": 287.5,
+        "y": 459,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "active": true,
+        "complete": "true",
+        "console": "false",
+        "id": "1b04e699.750559",
+        "name": "main.out",
+        "type": "debug",
+        "wires": [],
+        "x": 400.5,
+        "y": 459,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "id": "cbda8073.4e92a",
+        "links": [
+            "14bf125c.3da62e"
+        ],
+        "name": "",
+        "type": "link out",
+        "wires": [],
+        "x": 526.5,
+        "y": 109,
+        "z": "4e83eaa.2cae714"
+    },
+    {
+        "id": "f07f9e82.fff1c",
+        "links": [
+            "869369d4.1cf018"
+        ],
+        "name": "",
+        "type": "link in",
+        "wires": [
+            [
+                "ca1957ef.d2f168",
+                "6a1d5712.c39568"
+            ]
+        ],
+        "x": 149.5,
+        "y": 108,
+        "z": "4e83eaa.2cae714"
+    },
+    {
+        "crontab": "",
+        "id": "6a1a2128.63696",
+        "name": "",
+        "once": false,
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "topic": "",
+        "type": "inject",
+        "wires": [
+            [
+                "c4182ab5.21acc8"
+            ]
+        ],
+        "x": 116.5,
+        "y": 135,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "id": "4bded860.682168",
+        "name": "",
+        "remote": "http://nodered-cloud:1880",
+        "tab": "HeavyTask",
+        "type": "tab-deploy",
+        "wires": [],
+        "x": 434.5,
+        "y": 134,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "active": true,
+        "complete": "payload",
+        "console": "false",
+        "id": "ca1957ef.d2f168",
+        "name": "heavytask.in",
+        "type": "debug",
+        "wires": [],
+        "x": 393.5,
+        "y": 176,
+        "z": "4e83eaa.2cae714"
+    },
+    {
+        "func": "msg.payload = {\n    user: \"admin\",\n    password: \"password\"\n}\nreturn msg;",
+        "id": "c4182ab5.21acc8",
+        "name": "f1",
+        "noerr": 0,
+        "outputs": 1,
+        "type": "function",
+        "wires": [
+            [
+                "4bded860.682168"
+            ]
+        ],
+        "x": 268.5,
+        "y": 135,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "func": "msg.temp = msg.payload.temp;\nmsg.payload = {\n    timestamp: Date.now(),\n    //url: \"https://github.com/desmondmorris/node-tesseract/raw/master/test/test.png\"\n    url: \"https://raw.githubusercontent.com/rosogon/agile-review-demo/samples/images/img_18_0.png\"\n}\n\nreturn msg;",
+        "id": "d7805dc0.f624f",
+        "name": "f2",
+        "noerr": 0,
+        "outputs": 1,
+        "type": "function",
+        "wires": [
+            [
+                "16964ca3.ec29f3"
+            ]
+        ],
+        "x": 239.5,
+        "y": 222,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "id": "bbb31792.fd3f58",
+        "links": [
+            "14bf125c.3da62e"
+        ],
+        "name": "",
+        "type": "link out",
+        "wires": [],
+        "x": 515.5,
+        "y": 355,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "cpu": "80",
+        "dummy": false,
+        "id": "16964ca3.ec29f3",
+        "mem": "80",
+        "name": "link",
+        "remote": "http://nodered-cloud:1880/f07f9e82.fff1c",
+        "temperature": "70",
+        "type": "cloud-link",
+        "wires": [
+            [
+                "869369d4.1cf018"
+            ],
+            [
+                "bbb31792.fd3f58"
+            ]
+        ],
+        "x": 375.5,
+        "y": 305,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "id": "b23115a0.470a08",
+        "language": "eng",
+        "name": "",
+        "type": "tesseract",
+        "wires": [
+            [
+                "cbda8073.4e92a"
+            ]
+        ],
+        "x": 423.5,
+        "y": 109,
+        "z": "4e83eaa.2cae714"
+    },
+    {
+        "func": "msg.payload = msg.payload.url\nmsg.local = msg.payload.remote? false: true;\nreturn msg;",
+        "id": "6a1d5712.c39568",
+        "name": "",
+        "noerr": 0,
+        "outputs": 1,
+        "type": "function",
+        "wires": [
+            [
+                "b23115a0.470a08"
+            ]
+        ],
+        "x": 279.5,
+        "y": 109,
+        "z": "4e83eaa.2cae714"
+    },
+    {
+        "addpay": false,
+        "append": "",
+        "command": "vcgencmd measure_temp",
+        "id": "66e60647.657348",
+        "name": "vcgencmd",
+        "timer": "",
+        "type": "exec",
+        "useSpawn": "",
+        "wires": [
+            [
+                "139be02f.0b89a"
+            ],
+            [],
+            []
+        ],
+        "x": 299.5,
+        "y": 989.5,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "crontab": "",
+        "id": "3658e54b.107d8a",
+        "name": "",
+        "once": false,
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "1",
+        "topic": "",
+        "type": "inject",
+        "wires": [
+            [
+                "ded9ee05.94219",
+                "66e60647.657348",
+                "39f7331e.1c908c",
+                "a15815d6.7ae1e8",
+                "1ee41a94.bef965"
+            ]
+        ],
+        "x": 94,
+        "y": 938,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "func": "msg.payload = msg.payload.replace(\"temp=\", \"\").replace(\"'C\", \"\")\nmsg.payload = parseFloat(msg.payload)\nreturn [ msg, { payload: 70, topic: \"threshold\"} ];",
+        "id": "139be02f.0b89a",
+        "name": "",
+        "noerr": 0,
+        "outputs": "2",
+        "type": "function",
+        "wires": [
+            [
+                "e467e975.808918",
+                "75bfdb25.f01704"
+            ],
+            [
+                "75bfdb25.f01704"
+            ]
+        ],
+        "x": 443.5,
+        "y": 976,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "format": "{{value}}",
+        "group": "162dd721.824209",
+        "gtype": "gage",
+        "height": 0,
+        "id": "e467e975.808918",
+        "label": "\u00baC",
+        "max": "100",
+        "min": "0",
+        "name": "temp",
+        "order": 1,
+        "seg1": "55",
+        "seg2": "70",
+        "title": "",
+        "type": "ui_gauge",
+        "width": 0,
+        "wires": [],
+        "x": 623.5,
+        "y": 954,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "chartType": "line",
+        "colors": [
+            "#1f77b4",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "cutout": 0,
+        "group": "162dd721.824209",
+        "height": 0,
+        "id": "75bfdb25.f01704",
+        "interpolate": "linear",
+        "label": "",
+        "legend": "false",
+        "name": "temp_chart",
+        "nodata": "",
+        "order": 2,
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "type": "ui_chart",
+        "width": 0,
+        "wires": [
+            [],
+            []
+        ],
+        "x": 641.5,
+        "xformat": "HH:mm:ss",
+        "y": 1000,
+        "ymax": "80",
+        "ymin": "40",
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "id": "ba93fde8.d799f",
+        "name": "",
+        "scope": [
+            "16964ca3.ec29f3"
+        ],
+        "type": "status",
+        "wires": [
+            [
+                "b6d5f9a5.776298"
+            ]
+        ],
+        "x": 85,
+        "y": 587,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "checkall": "false",
+        "id": "b6d5f9a5.776298",
+        "name": "",
+        "outputs": 2,
+        "property": "status.text",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "local",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "remote",
+                "vt": "str"
+            }
+        ],
+        "type": "switch",
+        "wires": [
+            [
+                "8ba4b14a.ded25"
+            ],
+            [
+                "949db65f.051dc8"
+            ]
+        ],
+        "x": 87.5,
+        "y": 643,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "format": "{{value}}",
+        "group": "53bbd9b7.99a9d8",
+        "gtype": "gage",
+        "height": 0,
+        "id": "2986326d.4c42ce",
+        "label": "%",
+        "max": "100",
+        "min": "00",
+        "name": "mem",
+        "order": 1,
+        "seg1": "55",
+        "seg2": "80",
+        "title": "",
+        "type": "ui_gauge",
+        "width": 0,
+        "wires": [],
+        "x": 628.5,
+        "y": 874,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "chartType": "line",
+        "colors": [
+            "#1f77b4",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "cutout": 0,
+        "group": "53bbd9b7.99a9d8",
+        "height": 0,
+        "id": "d53e355e.3288e8",
+        "interpolate": "linear",
+        "label": "",
+        "legend": "false",
+        "name": "mem_chart",
+        "nodata": "",
+        "order": 2,
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "type": "ui_chart",
+        "width": 0,
+        "wires": [
+            [],
+            []
+        ],
+        "x": 643.5,
+        "xformat": "HH:mm:ss",
+        "y": 908,
+        "ymax": "100",
+        "ymin": "0",
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "func": "fs = global.get('fs')\nos = global.get('os')\n\nconst reTotal = /MemTotal: *([0-9]+) .*/\nconst reAvail = /MemAvailable: *([0-9]+) .*/\n\nfunction getValuesRpi() {\n    return Promise.all( [ memp(), tempp(), cpup() ]).then( results => {\n        return {\n            \"mem\": results[0],\n            \"cpu\": results[2],\n            \"load\": os.loadavg()[0],\n            \"temp\": results[1]\n        }\n    });\n}\n\nfunction memp() {\n    return new Promise( (resolve, reject) => {\n        fs.readFile(\"/proc/meminfo\", \"utf8\", (err, data) => {\n            if (err) {\n                reject(err)\n            }\n            var lines = data.split(\"\\n\");\n            var avail = lines.find( item => {\n                return item.startsWith(\"MemAvailable\")\n            });\n            var total = lines.find( item => {\n                return item.startsWith(\"MemTotal\")\n            })\n            if (avail == undefined || total === undefined) {\n                reject(\"Could not read /proc/meminfo\")\n            }\n            try {\n                var mAvail = parseInt(reAvail.exec(avail)[1]);\n                var mTotal = parseInt(reTotal.exec(total)[1]);\n                var usage = 100.0 * (1 - mAvail / mTotal);\n                usage = usage.toFixed(2)\n                resolve(usage);\n            } catch (err) {\n                reject(err)\n            }\n        })\n    });\n}\n\n\nmemp().then( value => {\n    msg.payload = value;\n    node.send([ msg, { payload: 80, topic: \"threshold\"}]);\n}).catch(err => {\n    msg.payload = \"Error: \" + (err.message || \"\") + (err.stack || \"\");\n    node.send(msg);\n});\n",
+        "id": "ded9ee05.94219",
+        "name": "mem",
+        "noerr": 0,
+        "outputs": "2",
+        "type": "function",
+        "wires": [
+            [
+                "2986326d.4c42ce",
+                "d53e355e.3288e8"
+            ],
+            [
+                "d53e355e.3288e8"
+            ]
+        ],
+        "x": 299.5,
+        "y": 936,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "addpay": false,
+        "append": "",
+        "command": "tail -1 /var/tmp/sar | sed -e's/.* //'",
+        "id": "39f7331e.1c908c",
+        "name": "sar",
+        "timer": "",
+        "type": "exec",
+        "useSpawn": "",
+        "wires": [
+            [
+                "d6118b5b.aee438"
+            ],
+            [],
+            []
+        ],
+        "x": 279.5,
+        "y": 1049.5,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "func": "msg.payload = (100 - parseFloat(msg.payload)).toFixed(2);\nreturn [ msg, {payload: 80, topic: \"thresold\"} ];",
+        "id": "d6118b5b.aee438",
+        "name": "",
+        "noerr": 0,
+        "outputs": "2",
+        "type": "function",
+        "wires": [
+            [
+                "e03f0a6c.517c38",
+                "b8ed2e00.5486c"
+            ],
+            [
+                "b8ed2e00.5486c"
+            ]
+        ],
+        "x": 440.5,
+        "y": 1045,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "format": "{{value}}",
+        "group": "78b8ad23.1d8374",
+        "gtype": "gage",
+        "height": 0,
+        "id": "e03f0a6c.517c38",
+        "label": "%",
+        "max": "100",
+        "min": 0,
+        "name": "cpu",
+        "order": 1,
+        "seg1": "60",
+        "seg2": "80",
+        "title": "",
+        "type": "ui_gauge",
+        "width": 0,
+        "wires": [],
+        "x": 617.5,
+        "y": 1045,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "chartType": "line",
+        "colors": [
+            "#1f77b4",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "cutout": 0,
+        "group": "78b8ad23.1d8374",
+        "height": 0,
+        "id": "b8ed2e00.5486c",
+        "interpolate": "linear",
+        "label": "",
+        "legend": "false",
+        "name": "cpu_chart",
+        "nodata": "",
+        "order": 2,
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "type": "ui_chart",
+        "width": 0,
+        "wires": [
+            [],
+            []
+        ],
+        "x": 627.5,
+        "xformat": "HH:mm:ss",
+        "y": 1080,
+        "ymax": "100",
+        "ymin": "0",
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "chartType": "bar",
+        "colors": [
+            "#00ae00",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "cutout": 0,
+        "group": "7509f13.54aff1",
+        "height": 0,
+        "id": "5d88f978.2159c8",
+        "interpolate": "linear",
+        "label": "",
+        "legend": "false",
+        "name": "jobs",
+        "nodata": "",
+        "order": 0,
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "type": "ui_chart",
+        "width": 0,
+        "wires": [
+            [],
+            []
+        ],
+        "x": 626.5,
+        "xformat": "HH:mm:ss",
+        "y": 767,
+        "ymax": "5",
+        "ymin": "0",
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "func": "msg.payload = flow.get(\"nlocal\");\nmsg.topic = \"local jobs\";\nreturn msg;",
+        "id": "a15815d6.7ae1e8",
+        "name": "get local",
+        "noerr": 0,
+        "outputs": 1,
+        "type": "function",
+        "wires": [
+            [
+                "5d88f978.2159c8",
+                "c40b2fb5.83893"
+            ]
+        ],
+        "x": 425.5,
+        "y": 767,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "func": "msg.payload = flow.get(\"nremote\");\nmsg.topic = \"remote jobs\";\nreturn msg;",
+        "id": "1ee41a94.bef965",
+        "name": "get remote",
+        "noerr": 0,
+        "outputs": 1,
+        "type": "function",
+        "wires": [
+            [
+                "5d88f978.2159c8",
+                "c40b2fb5.83893"
+            ]
+        ],
+        "x": 416.5,
+        "y": 808,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "func": "n = flow.get(\"nlocal\") || 0;\nflow.set(\"nlocal\", ++n)\nnode.log(\"n = \" + n);\nreturn msg;",
+        "id": "8ba4b14a.ded25",
+        "name": "local++",
+        "noerr": 0,
+        "outputs": 1,
+        "type": "function",
+        "wires": [
+            [
+                "a15815d6.7ae1e8"
+            ]
+        ],
+        "x": 228.5,
+        "y": 636,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "func": "n = flow.get(\"nremote\") || 0;\nflow.set(\"nremote\", ++n)\n\nreturn msg;",
+        "id": "949db65f.051dc8",
+        "name": "remote++",
+        "noerr": 0,
+        "outputs": 1,
+        "type": "function",
+        "wires": [
+            [
+                "1ee41a94.bef965"
+            ]
+        ],
+        "x": 227.5,
+        "y": 672,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "func": "if (msg.local) {\n    n = flow.get(\"nlocal\");\n    flow.set(\"nlocal\", --n);\n} else {\n    n = flow.get(\"nremote\");\n    flow.set(\"nremote\", --n);\n}\nreturn msg;",
+        "id": "c211bf23.c9fbe",
+        "name": "--",
+        "noerr": 0,
+        "outputs": 1,
+        "type": "function",
+        "wires": [
+            [
+                "a15815d6.7ae1e8",
+                "1ee41a94.bef965"
+            ]
+        ],
+        "x": 392.5,
+        "y": 610,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "crontab": "",
+        "id": "d218ed5b.f77e2",
+        "name": "start",
+        "once": true,
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "topic": "",
+        "type": "inject",
+        "wires": [
+            [
+                "7a938cfe.d70064"
+            ]
+        ],
+        "x": 81.5,
+        "y": 787,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "func": "flow.set(\"nlocal\", 0);\nflow.set(\"nremote\", 0);\nreturn msg;",
+        "id": "7a938cfe.d70064",
+        "name": "",
+        "noerr": 0,
+        "outputs": 1,
+        "type": "function",
+        "wires": [
+            [
+                "a15815d6.7ae1e8",
+                "1ee41a94.bef965"
+            ]
+        ],
+        "x": 216.5,
+        "y": 787,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "chartType": "line",
+        "colors": [
+            "#2dac49",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "cutout": 0,
+        "group": "7509f13.54aff1",
+        "height": 0,
+        "id": "c40b2fb5.83893",
+        "interpolate": "linear",
+        "label": "",
+        "legend": "false",
+        "name": "jobs_chart",
+        "nodata": "",
+        "order": 0,
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "type": "ui_chart",
+        "width": 0,
+        "wires": [
+            [],
+            []
+        ],
+        "x": 645.5,
+        "xformat": "HH:mm:ss",
+        "y": 809,
+        "ymax": "5",
+        "ymin": "0",
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "cancel": "",
+        "displayTime": "1",
+        "highlight": "green",
+        "id": "4e176338.e3aa3c",
+        "name": "local notification",
+        "ok": "OK",
+        "outputs": 0,
+        "position": "top left",
+        "topic": "",
+        "type": "ui_toast",
+        "wires": [],
+        "x": 619.5,
+        "y": 546,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "checkall": "true",
+        "id": "bfc9e39.e86902",
+        "name": "",
+        "outputs": 2,
+        "property": "local",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "type": "switch",
+        "wires": [
+            [
+                "4e176338.e3aa3c"
+            ],
+            [
+                "1fd3530c.2c32ed"
+            ]
+        ],
+        "x": 392.5,
+        "y": 563,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "cancel": "",
+        "displayTime": "1",
+        "highlight": "red",
+        "id": "1fd3530c.2c32ed",
+        "name": "remote notification",
+        "ok": "OK",
+        "outputs": 0,
+        "position": "top right",
+        "topic": "",
+        "type": "ui_toast",
+        "wires": [],
+        "x": 629.5,
+        "y": 577,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "id": "caacda08.eb7e38",
+        "method": "post",
+        "name": "",
+        "swaggerDoc": "",
+        "type": "http in",
+        "url": "/newjob",
+        "wires": [
+            [
+                "16964ca3.ec29f3",
+                "db940593.c30858"
+            ]
+        ],
+        "x": 101.5,
+        "y": 305,
+        "z": "82bc67f0.1206c8"
+    },
+    {
+        "id": "db940593.c30858",
+        "name": "",
+        "type": "http response",
+        "wires": [],
+        "x": 262.5,
+        "y": 357,
+        "z": "82bc67f0.1206c8"
+    }
+]
