@@ -15,6 +15,6 @@ for (( i = 0 ; i < $N_IMAGES ; i++ )); do
   LETTERS=$(letter)$(letter)$(letter)
   PLATE=$NUMBERS-$LETTERS
   echo "Generating $PLATE"
-  convert -background white -fill black -pointsize 72 label:"$PLATE" img$i.png
+  convert -background white -fill black -pointsize 36 label:"$PLATE" img$i.png
 done
 
